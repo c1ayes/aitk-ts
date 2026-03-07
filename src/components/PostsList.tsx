@@ -38,9 +38,10 @@ function PostsList(){
 
     return(
         <div>
+            <nav className="flex justify-center hover:text-indigo-500 text-xl text-amber-800 font-bold"><Link to={'/burgers'}>Бургеры</Link></nav>
             <ul>
                 {posts.map(post =>(
-                    <li key={post.id} className="text-xl hover:text-indigo-500 list-disc m-2">
+                    <li key={post.id} className="text-xl hover:text-indigo-500 list-disc m-2 border text-center">
                         <Link to={`/posts/${post.id}`}><h2>{post.title}</h2></Link>
                     </li>
                 ))}

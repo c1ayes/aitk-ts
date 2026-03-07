@@ -7,6 +7,8 @@ import PostDetail from './components/PostDetail.tsx'
 import type { PostCommentForm } from './types/PostCommentType.tsx'
 import { useState } from 'react'
 import PostComment from './components/PostComment.tsx'
+import BurgersLanding from './components/BurgersLanding.tsx'
+
 
 function App() {
   const [comments, setComments] = useState<PostCommentForm[]>([]) 
@@ -20,6 +22,8 @@ function App() {
           <Route path="/registration" element={<Registration/>}></Route>
           <Route path="/posts/:id" element={<PostDetail comments={comments}/>}/>
           <Route path='/posts/comment/:postid' element={<PostComment setComments={setComments}/>}></Route>
+          <Route path='/burgers' element={<BurgersLanding/>} />
+          <Route path='/registration' element={<Registration/>}/>
         </Routes>
       </div>
     </BrowserRouter>
