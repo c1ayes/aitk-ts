@@ -40,7 +40,7 @@ function PostsList(){
         <div>
             <ul>
                 {posts.map(post =>(
-                    <li key={post.id}>
+                    <li key={post.id} className="text-xl hover:text-indigo-500 list-disc m-2">
                         <Link to={`/posts/${post.id}`}><h2>{post.title}</h2></Link>
                     </li>
                 ))}
